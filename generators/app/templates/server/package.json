@@ -1,0 +1,35 @@
+{
+  "name": "<%= title %>-server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node app.js",
+    "test": "echo \"Error: no test specified\" && exit 0",
+    "lint": "prettier-standard './**/*.js'",
+    "dev": "NODE_ENV=development nodemon app.js",
+    "migrate": "knex migrate:latest && knex seed:run",
+    "knex": "knex",
+    "rollback": "knex migrate:rollback",
+    "recreate-db": "npm run rollback && npm run migrate",
+    "circle-ci-recreate-db": "npm run rollback && npm run migrate"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "cors": "^2.8.4",
+    "express": "^4.16.3",
+    "express-handlebars": "^3.0.0",
+    "jsonwebtoken": "^8.3.0",
+    "knex": "^0.15.2",
+    "passport": "^0.4.0",
+    "passport-jwt": "^4.0.0",
+    "passport-local": "^1.0.0",
+    "pg": "^7.4.3"
+  },
+  "devDependencies": {
+    "prettier-standard": "^8.0.1",
+    "nodemon": "^1.18.3"
+  }
+}
