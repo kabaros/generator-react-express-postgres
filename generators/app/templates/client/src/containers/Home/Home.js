@@ -3,12 +3,12 @@ import * as api from '../../helpers/api'
 
 class Home extends Component {
   state = {
-    users: []
+    status: []
   }
   componentDidMount () {
-    api.getUsers().then(users => {
+    api.getStatus().then(status => {
       this.setState({
-        users
+        status
       })
     })
   }
@@ -16,15 +16,13 @@ class Home extends Component {
     return (
       <div className='App'>
         <header className='App-header'>
-          <h1 className='App-title'>Welcome to Succulent Crunchie</h1>
+          <h1 className='App-title'>Welcome to <%= title %></h1>
         </header>
         <div className='App-intro'>
-          {this.state.users.map(({ user_id, name }) => {
-            return <p key={user_id}>{name}</p>
+          This is fetched from API /status: {this.state.status.map(({ status }) => {
+            return <span key={status}>{status}</span>
           })}
         </div>
-        <h2>Upload your photos</h2>
-
       </div>
     )
   }

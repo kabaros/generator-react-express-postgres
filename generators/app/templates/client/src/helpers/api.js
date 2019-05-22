@@ -4,9 +4,10 @@ const instance = axios.create({
   baseURL: API_URL
 })
 
-export const getUsers = () => {
-  return instance.get('api/users').then(res => res.data)
+export const getStatus = () => {
+  return instance.get('api/status').then(res => res.data)
 }
+
 export const postUser = (email, password, name, city, postcode) => {
   return instance.post('/api/users', { email, password, name, city, postcode })
 }
