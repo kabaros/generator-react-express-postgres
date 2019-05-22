@@ -1,19 +1,19 @@
-# generator-react-express-postgres [![NPM version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url] [![Dependency Status][daviddm-image]][daviddm-url] [![Coverage percentage][coveralls-image]][coveralls-url]
+# generator-rexp [![NPM version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url] [![Dependency Status][daviddm-image]][daviddm-url] [![Coverage percentage][coveralls-image]][coveralls-url]
 > 
 
 ## Installation
 
-First, install [Yeoman](http://yeoman.io) and generator-react-express-postgres using [npm](https://www.npmjs.com/) (we assume you have pre-installed [node.js](https://nodejs.org/)).
+First, install [Yeoman](http://yeoman.io) and generator-rexp using [npm](https://www.npmjs.com/) (we assume you have pre-installed [node.js](https://nodejs.org/)).
 
 ```bash
 npm install -g yo
-npm install -g generator-react-express-postgres
+npm install -g generator-rexp
 ```
 
 Then generate your new project:
 
 ```bash
-yo react-express-postgres
+yo rexp
 ```
 
 ## Getting To Know Yeoman
@@ -28,11 +28,11 @@ yo react-express-postgres
 Apache-2.0 © []()
 
 
-[npm-image]: https://badge.fury.io/js/generator-react-express-postgres.svg
-[npm-url]: https://npmjs.org/package/generator-react-express-postgres
-[travis-image]: https://travis-ci.org//generator-react-express-postgres.svg?branch=master
-[travis-url]: https://travis-ci.org//generator-react-express-postgres
-[daviddm-image]: https://david-dm.org//generator-react-express-postgres.svg?theme=shields.io
-[daviddm-url]: https://david-dm.org//generator-react-express-postgres
-[coveralls-image]: https://coveralls.io/repos//generator-react-express-postgres/badge.svg
-[coveralls-url]: https://coveralls.io/r//generator-react-express-postgres
+[npm-image]: https://badge.fury.io/js/generator-rexp.svg
+[npm-url]: https://npmjs.org/package/generator-rexp
+[travis-image]: https://travis-ci.org//generator-rexp.svg?branch=master
+[travis-url]: https://travis-ci.org//generator-rexp
+[daviddm-image]: https://david-dm.org//generator-rexp.svg?theme=shields.io
+[daviddm-url]: https://david-dm.org//generator-rexp
+[coveralls-image]: https://coveralls.io/repos//generator-rexp/badge.svg
+[coveralls-url]: https://coveralls.io/r//generator-rexp
