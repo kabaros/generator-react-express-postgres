@@ -1,21 +1,38 @@
 {
   "name": "generator-rexp",
   "version": "0.0.0",
-  "description": "",
-  "homepage": "",
-  "author": {
-    "name": "",
-    "email": "",
-    "url": ""
+  "description": "Generat React Express app backed by Postgres",
+  "scripts": {
+    "pretest": "eslint .",
+    "test": "jest"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kabaros/generator-react-express-postgres.git"
+  },
+  "bugs": {
+    "url": "https://github.com/kabaros/generator-react-express-postgres/issues"
+  },
+  "homepage": "https://github.com/kabaros/generator-react-express-postgres#readme",
   "files": [
     "generators"
   ],
   "main": "generators/index.js",
   "keywords": [
-    "",
+    "react",
+    "express",
+    "postgres",
+    "builder",
+    "generator",
+    "scaffold",
+    "javascript",
     "yeoman-generator"
   ],
+  "dependencies": {
+    "yeoman-generator": "^2.0.1",
+    "chalk": "^2.1.0",
+    "yosay": "^2.0.1"
+  },
   "devDependencies": {
     "yeoman-test": "^1.7.0",
     "yeoman-assert": "^3.1.0",
@@ -31,11 +48,6 @@
   },
   "engines": {
     "npm": ">= 4.0.0"
-  },
-  "dependencies": {
-    "yeoman-generator": "^2.0.1",
-    "chalk": "^2.1.0",
-    "yosay": "^2.0.1"
   },
   "jest": {
     "testEnvironment": "node"
@@ -66,10 +78,5 @@
       "prettier"
     ]
   },
-  "scripts": {
-    "pretest": "eslint .",
-    "test": "jest"
-  },
-  "repository": "git@github.com:kabaros/kabaros-starter-kit.git",
   "license": "Apache-2.0"
 }
