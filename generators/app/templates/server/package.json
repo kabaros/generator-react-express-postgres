@@ -4,13 +4,15 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node app.js",
+    "start": "NODE_ENV=production node index.js",
     "test": "echo \"Error: no test specified\" && exit 0",
     "lint": "prettier-standard './**/*.js'",
-    "dev": "NODE_ENV=development nodemon app.js",
-    "migrate": "knex migrate:latest && knex seed:run",
+    "dev": "NODE_ENV=development nodemon index.js",
+    "migrate-seed": "npm run migrate && npm run seed",
+    "migrate": "knex migrate:latest --knexfile ./src/knexfile.js",
+    "seed": "knex seed:run --knexfile ./src/knexfile.js",
     "knex": "knex",
-    "rollback": "knex migrate:rollback",
+    "rollback": "knex migrate:rollback --knexfile ./src/knexfile.js",
     "recreate-db": "npm run rollback && npm run migrate",
     "circle-ci-recreate-db": "npm run rollback && npm run migrate"
   },
@@ -19,6 +21,7 @@
   "dependencies": {
     "body-parser": "^1.18.3",
     "cors": "^2.8.4",
+    "dotenv": "^8.0.0",
     "express": "^4.16.3",
     "express-handlebars": "^3.0.0",
     "jsonwebtoken": "^8.3.0",

@@ -36,10 +36,19 @@ module.exports = class extends Generator {
   }
 
   writing() {
-    this.fs.copyTpl(this.templatePath('**/*'), this.destinationRoot(), {
-      title: this.props.name,
-      dbname: this.props.dbname
-    });
+    this.fs.copyTpl(
+      this.templatePath('**/*'),
+      this.destinationRoot(),
+      {
+        title: this.props.name,
+        dbname: this.props.dbname
+      },
+      {},
+      {
+        // For the .env file
+        globOptions: { dot: true }
+      }
+    );
 
     const projectName = this.props.name.replace(/\s/gi, '-').toLowerCase();
 

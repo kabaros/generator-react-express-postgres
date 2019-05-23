@@ -1,11 +1,13 @@
+require('dotenv').config({ path: '../.env' });
+const CONFIG = require('./config');
 module.exports = {
   development: {
     client: 'pg',
     connection: {
-      host: process.env.DB_HOST || 'localhost',
-      database: process.env.DB_NAME || '<%= dbname %>',
-      user: process.env.DB_USER || 'nyala',
-      password: process.env.DB_PASSWORD || 'nyala'
+      host: CONFIG.DB_HOST,
+      database: CONFIG.DB_NAME,
+      user: CONFIG.DB_USER,
+      password: CONFIG.DB_PASSWORD
     },
     pool: {
       min: 2,
@@ -27,4 +29,4 @@ module.exports = {
       tableName: 'knex_migrations'
     }
   }
-}
+};
