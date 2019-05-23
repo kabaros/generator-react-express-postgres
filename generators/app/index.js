@@ -7,7 +7,11 @@ module.exports = class extends Generator {
   prompting() {
     // Have Yeoman greet the user.
     this.log(
-      yosay(`Welcome to the luminous ${chalk.red('generator-react-express-postgres')} generator!`)
+      yosay(
+        `Welcome to the luminous ${chalk.red(
+          'generator-react-express-postgres'
+        )} generator!`
+      )
     );
 
     const prompts = [
@@ -32,26 +36,21 @@ module.exports = class extends Generator {
   }
 
   writing() {
-    this.fs.copyTpl(
-      this.templatePath('**/*'),
-      this.destinationRoot(),
-      { 
-        title: this.props.name,
-        dbname: this.props.dbname
-      }
-    );
-  
-    const projectName = this.props.name.replace(/\s/ig, '-').toLowerCase()
-    
+    this.fs.copyTpl(this.templatePath('**/*'), this.destinationRoot(), {
+      title: this.props.name,
+      dbname: this.props.dbname
+    });
+
+    const projectName = this.props.name.replace(/\s/gi, '-').toLowerCase();
+
     this.fs.copyTpl(
       this.templatePath('**/package.json'),
       this.destinationRoot(),
       { title: projectName }
     );
-
   }
 
   install() {
-    this.installDependencies({bower: false});
+    this.installDependencies({ bower: false });
   }
 };
